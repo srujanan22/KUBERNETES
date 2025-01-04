@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod
+  namespace: example-namespace
+spec:
+  serviceAccountName: srujana-service-account
+  containers:
+    - name: containersa
+      image: nginx
