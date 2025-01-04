@@ -1,0 +1,11 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: srujanajob
+spec:
+  template:
+    spec:
+      containers:
+        - name: container11
+          image: nginx
+      restartPolicy: Never
