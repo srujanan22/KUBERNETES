@@ -1,0 +1,32 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: ingress-egress-policy
+  namespace: default  
+spec:
+  podSelector:
+    matchLabels:
+      app: srujanademo1
+  policyTypes:
+  - Ingress  
+  - Egress   
+  
+  ingress:
+  - from:
+    - ipBlock:
+        cidr: 192.168.1.0/24  
+    - namespaceSelector:
+        matchLabels:
+          name: example-namespace  
+    ports:
+    - protocol: TCP
+      port: 80  
+  
+  
+  egress:
+  - to:
+    - ipBlock:
+        cidr: 10.0.0.0/24  
+    ports:
+    - protocol: TCP
+      port: 443  
