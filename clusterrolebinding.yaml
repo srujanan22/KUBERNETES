@@ -6,6 +6,7 @@ subjects:
   - kind: ServiceAccount
     name: default
     namespace: default
+    
 roleRef:
   kind: ClusterRole
   name: read-only-pod-access
