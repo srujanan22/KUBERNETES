@@ -12,5 +12,5 @@ spec:
             - name: container3
               image: nginx
           restartPolicy: Never
-~                                                                                                                                                                                                          
-~                           
+                                                                                                                                                                                                          
+                          
